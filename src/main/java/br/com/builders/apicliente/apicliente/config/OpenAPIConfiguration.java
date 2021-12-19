@@ -7,9 +7,13 @@ import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.media.Content;
 import io.swagger.v3.oas.models.media.MediaType;
 import io.swagger.v3.oas.models.responses.ApiResponse;
+import io.swagger.v3.oas.models.servers.Server;
 import org.springdoc.core.customizers.OpenApiCustomiser;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
+import java.util.Arrays;
+import java.util.List;
 
 @Configuration
 public class OpenAPIConfiguration {
@@ -24,8 +28,20 @@ public class OpenAPIConfiguration {
                         .title("API - Cadastro Clientes")
                         .version("v1")
                         .contact(new Contact().name("Carlos Pantoja").email("cepsolutionsltds@gmail.com").url("https://www.linkedin.com/in/ceppantoja/"))
-                        .description("API - Cadastro de clientes para o MVP e avaliação na Builders"));
+                        .description("API - Cadastro de clientes para o MVP e avaliação na Builders"))
+                        .servers(this.servidores());
 
+    }
+
+    private List<Server> servidores() {
+        var servidorProducao = new Server();
+        servidorProducao.setUrl("https://apicliente-builders.herokuapp.com/api-cliente");
+        servidorProducao.setDescription("Servidor de produção do MVP no Heroku");
+
+        var servidorLocal = new Server();
+        servidorLocal.setUrl("http://localhost:8080/api-cliente");
+        servidorLocal.setDescription("Servidor local do MVP");
+        return Arrays.asList(servidorLocal, servidorProducao);
     }
 
     @Bean

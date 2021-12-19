@@ -56,5 +56,10 @@ Também existe a possibilidade de inicializar o projeto utilizando o Docker. Exe
 A URL para acessar a [documentação do projeto](http://localhost:8080/api-cliente/api-docs), caso quer ver a documentação de uma forma mais amigável, segue o [link do swagger](http://localhost:8080/api-cliente/swagger-ui/index.html).
 
 ### Documentação Heroku
-A URL para acessar a [documentação do projeto](http://localhost:8080/api-cliente/api-docs), caso quer ver a documentação de uma forma mais amigável, segue o [link do swagger](http://localhost:8080/api-cliente/swagger-ui/index.html).
+A URL para acessar a [documentação do projeto](https://apicliente-builders.herokuapp.com/api-cliente/api-docs), caso quer ver a documentação de uma forma mais amigável, segue o [link do swagger](https://apicliente-builders.herokuapp.com/api-cliente/swagger-ui/index.html).
 
+### Collection Postman
+A Collection do postman utilizada para o teste está no projeto no [arquivo](API-Cadastro_Clientes.postman_collection.json).
+Existe uma variável na collection com a URL base do request, no arquivo mencionado anteriormente, está apontando para o
+ambiente local de desenvolvimento, estava fazendo a troca dos ambientes através do environment, mas isso não foi no arquivo.
+Se for fazer o teste no Heroku, é necessário alterar a variável baseUrl para https://apicliente-builders.herokuapp.com/api-cliente

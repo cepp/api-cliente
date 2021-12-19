@@ -1,0 +1,1241 @@
+{
+	"info": {
+		"_postman_id": "72835ea2-c795-4bec-ae4b-3351752bd36c",
+		"name": "API - Cadastro Clientes",
+		"description": "API - Cadastro de clientes para o MVP e avaliação na Builders\n\nContact Support:\n Name: Carlos Pantoja\n Email: cepsolutionsltds@gmail.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api/v1/cliente",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "Busca por Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/cliente/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"cliente",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "-61408180",
+											"description": "(Required) "
+										}
+									]
+								},
+								"description": "Buscar o cadastro de um cliente pelo Id"
+							},
+							"response": [
+								{
+									"name": "Busca realizada com sucesso",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/cliente/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"cliente",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-61408180",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Requisição inválida.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/cliente/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"cliente",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-61408180",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "\"Parâmetros passados no request inválidos.\""
+								},
+								{
+									"name": "Recurso não encontrado.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/cliente/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"cliente",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-61408180",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "\"Recurso não encontrado.\""
+								},
+								{
+									"name": "Erro interno no servidor.",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/cliente/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"cliente",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-61408180",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "\"Erro interno da aplicação não esperado.\""
+								}
+							]
+						},
+						{
+							"name": "Atualiza cadastro cliente",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"cpf\": \"65972975041\",\n    \"dataNascimento\": \"2021-12-18\",\n    \"endereco\": \"Rua movimentada, 344, AP 2314\",\n    \"nome\": \"Jão Manoel\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/cliente/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"cliente",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "-61408180",
+											"description": "(Required) "
+										}
+									]
+								},
+								"description": "Atualiza o cadastro de um cliente no sistema"
+							},
+							"response": [
+								{
+									"name": "Cliente atualizado com sucesso",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"cpf\": \"65972975041\",\n    \"dataNascimento\": \"2021-12-18\",\n    \"endereco\": \"Rua movimentada, 344, AP 2314\",\n    \"nome\": \"Jão Manoel\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/cliente/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"cliente",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-61408180",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Requisição inválida.",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"cpf\": \"65972975041\",\n    \"dataNascimento\": \"2021-12-18\",\n    \"endereco\": \"Rua movimentada, 344, AP 2314\",\n    \"nome\": \"Jão Manoel\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/cliente/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"cliente",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-61408180",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "\"Parâmetros passados no request inválidos.\""
+								},
+								{
+									"name": "Recurso não encontrado.",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"cpf\": \"65972975041\",\n    \"dataNascimento\": \"2021-12-18\",\n    \"endereco\": \"Rua movimentada, 344, AP 2314\",\n    \"nome\": \"Jão Manoel\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/cliente/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"cliente",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-61408180",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "\"Recurso não encontrado.\""
+								},
+								{
+									"name": "Erro interno no servidor.",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"cpf\": \"65972975041\",\n    \"dataNascimento\": \"2021-12-18\",\n    \"endereco\": \"Rua movimentada, 344, AP 2314\",\n    \"nome\": \"Jão Manoel\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/cliente/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"cliente",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-61408180",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "\"Erro interno da aplicação não esperado.\""
+								}
+							]
+						},
+						{
+							"name": "Remove cadastro cliente",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/cliente/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"cliente",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "-61408180",
+											"description": "(Required) "
+										}
+									]
+								},
+								"description": "Remove o cadastro de um cliente no sistema"
+							},
+							"response": [
+								{
+									"name": "Cliente removido com sucesso",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/cliente/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"cliente",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-61408180",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								},
+								{
+									"name": "Requisição inválida.",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/cliente/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"cliente",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-61408180",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "\"Parâmetros passados no request inválidos.\""
+								},
+								{
+									"name": "Recurso não encontrado.",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/cliente/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"cliente",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-61408180",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "\"Recurso não encontrado.\""
+								},
+								{
+									"name": "Erro interno no servidor.",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/v1/cliente/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"v1",
+												"cliente",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-61408180",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "\"Erro interno da aplicação não esperado.\""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Obter todos os clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/cliente?page=77212253&size=16964013&sort=[\"id ad\",\"Lorem\"]&page=&size=",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"cliente"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "77212253",
+									"description": "(Required) "
+								},
+								{
+									"key": "size",
+									"value": "16964013",
+									"description": "(Required) "
+								},
+								{
+									"key": "sort",
+									"value": "[\"id ad\",\"Lorem\"]",
+									"description": "(Required) "
+								},
+								{
+									"key": "page",
+									"value": "",
+									"description": "(Required) Número da página para a paginação. Caso não seja informado a paginação será desligada."
+								},
+								{
+									"key": "size",
+									"value": "",
+									"description": "(Required) Quantidade de itens por página para a paginação. Caso não seja o número da página a paginação será desligada."
+								}
+							]
+						},
+						"description": "Obtém resgistros de todos os clientes cadastrados paginados."
+					},
+					"response": [
+						{
+							"name": "Cadastros dos clientes retornados com sucesso.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/cliente?page=77212253&size=16964013&sort=id ad,Lorem&page=&size=",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"cliente"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "77212253"
+										},
+										{
+											"key": "size",
+											"value": "16964013"
+										},
+										{
+											"key": "sort",
+											"value": "id ad,Lorem"
+										},
+										{
+											"key": "page",
+											"value": ""
+										},
+										{
+											"key": "size",
+											"value": ""
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Requisição inválida.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/cliente?page=77212253&size=16964013&sort=id ad,Lorem&page=&size=",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"cliente"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "77212253"
+										},
+										{
+											"key": "size",
+											"value": "16964013"
+										},
+										{
+											"key": "sort",
+											"value": "id ad,Lorem"
+										},
+										{
+											"key": "page",
+											"value": ""
+										},
+										{
+											"key": "size",
+											"value": ""
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "\"Parâmetros passados no request inválidos.\""
+						},
+						{
+							"name": "Recurso não encontrado.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/cliente?page=77212253&size=16964013&sort=id ad,Lorem&page=&size=",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"cliente"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "77212253"
+										},
+										{
+											"key": "size",
+											"value": "16964013"
+										},
+										{
+											"key": "sort",
+											"value": "id ad,Lorem"
+										},
+										{
+											"key": "page",
+											"value": ""
+										},
+										{
+											"key": "size",
+											"value": ""
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "\"Recurso não encontrado.\""
+						},
+						{
+							"name": "Erro interno no servidor.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/cliente?page=77212253&size=16964013&sort=id ad,Lorem&page=&size=",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"cliente"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "77212253"
+										},
+										{
+											"key": "size",
+											"value": "16964013"
+										},
+										{
+											"key": "sort",
+											"value": "id ad,Lorem"
+										},
+										{
+											"key": "page",
+											"value": ""
+										},
+										{
+											"key": "size",
+											"value": ""
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "\"Erro interno da aplicação não esperado.\""
+						}
+					]
+				},
+				{
+					"name": "Cadastro cliente",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cpf\": \"65972975041\",\n    \"dataNascimento\": \"2021-12-18\",\n    \"endereco\": \"Rua movimentada, 344, AP 2314\",\n    \"nome\": \"Jão Manoel\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/cliente",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"cliente"
+							]
+						},
+						"description": "Inclui o cadastro de um cliente no sistema"
+					},
+					"response": [
+						{
+							"name": "Cliente cadastrado com sucesso",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"cpf\": \"65972975041\",\n    \"dataNascimento\": \"2021-12-18\",\n    \"endereco\": \"Rua movimentada, 344, AP 2314\",\n    \"nome\": \"Jão Manoel\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/cliente",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"cliente"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Requisição inválida.",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"cpf\": \"65972975041\",\n    \"dataNascimento\": \"2021-12-18\",\n    \"endereco\": \"Rua movimentada, 344, AP 2314\",\n    \"nome\": \"Jão Manoel\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/cliente",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"cliente"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "\"Parâmetros passados no request inválidos.\""
+						},
+						{
+							"name": "Recurso não encontrado.",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"cpf\": \"65972975041\",\n    \"dataNascimento\": \"2021-12-18\",\n    \"endereco\": \"Rua movimentada, 344, AP 2314\",\n    \"nome\": \"Jão Manoel\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/cliente",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"cliente"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "\"Recurso não encontrado.\""
+						},
+						{
+							"name": "Erro interno no servidor.",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"cpf\": \"65972975041\",\n    \"dataNascimento\": \"2021-12-18\",\n    \"endereco\": \"Rua movimentada, 344, AP 2314\",\n    \"nome\": \"Jão Manoel\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/cliente",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"cliente"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "\"Erro interno da aplicação não esperado.\""
+						}
+					]
+				},
+				{
+					"name": "Obter clientes filtrados",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/v1/cliente/filtrado?nome=et veniam occaecat irure tempor&dataCadastro=1988-04-11",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"cliente",
+								"filtrado"
+							],
+							"query": [
+								{
+									"key": "nome",
+									"value": "et veniam occaecat irure tempor",
+									"description": "Nome do cleinte que será utilizado como filtro verificando se contém em uma parte do nome."
+								},
+								{
+									"key": "dataCadastro",
+									"value": "1988-04-11",
+									"description": "Data de cadastro do cleinte que será utilizado como filtro verificando se existe algum igual."
+								}
+							]
+						},
+						"description": "Obtém resgistros dos clientes cadastrados pelos filtros informados na API."
+					},
+					"response": [
+						{
+							"name": "Cadastros dos clientes filtrados com sucesso.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/cliente/filtrado?nome=et veniam occaecat irure tempor&dataCadastro=1988-04-11",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"cliente",
+										"filtrado"
+									],
+									"query": [
+										{
+											"key": "nome",
+											"value": "et veniam occaecat irure tempor"
+										},
+										{
+											"key": "dataCadastro",
+											"value": "1988-04-11"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "Requisição inválida.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/cliente/filtrado?nome=et veniam occaecat irure tempor&dataCadastro=1988-04-11",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"cliente",
+										"filtrado"
+									],
+									"query": [
+										{
+											"key": "nome",
+											"value": "et veniam occaecat irure tempor"
+										},
+										{
+											"key": "dataCadastro",
+											"value": "1988-04-11"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "\"Parâmetros passados no request inválidos.\""
+						},
+						{
+							"name": "Recurso não encontrado.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/cliente/filtrado?nome=et veniam occaecat irure tempor&dataCadastro=1988-04-11",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"cliente",
+										"filtrado"
+									],
+									"query": [
+										{
+											"key": "nome",
+											"value": "et veniam occaecat irure tempor"
+										},
+										{
+											"key": "dataCadastro",
+											"value": "1988-04-11"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "\"Recurso não encontrado.\""
+						},
+						{
+							"name": "Erro interno no servidor.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/v1/cliente/filtrado?nome=et veniam occaecat irure tempor&dataCadastro=1988-04-11",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"cliente",
+										"filtrado"
+									],
+									"query": [
+										{
+											"key": "nome",
+											"value": "et veniam occaecat irure tempor"
+										},
+										{
+											"key": "dataCadastro",
+											"value": "1988-04-11"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "\"Erro interno da aplicação não esperado.\""
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080/api-cliente",
+			"type": "string"
+		}
+	]
+}

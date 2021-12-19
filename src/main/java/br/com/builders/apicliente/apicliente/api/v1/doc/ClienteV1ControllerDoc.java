@@ -50,7 +50,7 @@ public interface ClienteV1ControllerDoc {
     @Parameter(in = ParameterIn.QUERY, name = "dataCadastro", description = "Data de cadastro do cleinte que será utilizado como filtro verificando se existe algum igual.")
     @ApiResponse(responseCode = "200", description = "Cadastros dos clientes filtrados com sucesso.")
     Set<ClienteV1ResponseDoc> buscarClientesPorFiltro(@RequestParam(value = "nome", required = false) String nome,
-                                                      @RequestParam(value = "idade", required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate dataCadastro);
+                                                      @RequestParam(value = "dataCadastro", required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate dataCadastro);
 
     @Operation(summary = "Obter todos os clientes", description = "Obtém resgistros de todos os clientes cadastrados paginados.")
     @Parameter(in = ParameterIn.QUERY, name = "page", required = true, description = "Número da página para a paginação. Caso não seja informado a paginação será desligada.")

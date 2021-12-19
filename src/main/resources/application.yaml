@@ -25,7 +25,7 @@ spring:
     url: jdbc:postgresql://localhost:5400/cliente
     driverClassName: org.postgresql.Driver
     username: usr_cliente
-    password: MyS3cr3tP@ss
+    password: S3nh@Qu@s3#S3gur4!=
   jpa:
     properties:
       hibernate:
