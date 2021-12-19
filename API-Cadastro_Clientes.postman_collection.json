@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "72835ea2-c795-4bec-ae4b-3351752bd36c",
+		"_postman_id": "27b75147-36d9-4eb9-b7ab-07ea88c2a55a",
 		"name": "API - Cadastro Clientes",
 		"description": "API - Cadastro de clientes para o MVP e avaliação na Builders\n\nContact Support:\n Name: Carlos Pantoja\n Email: cepsolutionsltds@gmail.com",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -31,8 +31,8 @@
 									"variable": [
 										{
 											"key": "id",
-											"value": "-61408180",
-											"description": "(Required) "
+											"value": "1",
+											"description": "(Required) Identificador do cadastro do cliente."
 										}
 									]
 								},
@@ -58,8 +58,8 @@
 											"variable": [
 												{
 													"key": "id",
-													"value": "-61408180",
-													"description": "(Required) "
+													"value": "1",
+													"description": "(Required) Identificador do cadastro do cliente."
 												}
 											]
 										}
@@ -95,8 +95,8 @@
 											"variable": [
 												{
 													"key": "id",
-													"value": "-61408180",
-													"description": "(Required) "
+													"value": "1",
+													"description": "(Required) Identificador do cadastro do cliente."
 												}
 											]
 										}
@@ -132,8 +132,8 @@
 											"variable": [
 												{
 													"key": "id",
-													"value": "-61408180",
-													"description": "(Required) "
+													"value": "1",
+													"description": "(Required) Identificador do cadastro do cliente."
 												}
 											]
 										}
@@ -169,8 +169,8 @@
 											"variable": [
 												{
 													"key": "id",
-													"value": "-61408180",
-													"description": "(Required) "
+													"value": "1",
+													"description": "(Required) Identificador do cadastro do cliente."
 												}
 											]
 										}
@@ -222,8 +222,8 @@
 									"variable": [
 										{
 											"key": "id",
-											"value": "-61408180",
-											"description": "(Required) "
+											"value": "1",
+											"description": "(Required) Identificador do cadastro do cliente."
 										}
 									]
 								},
@@ -258,8 +258,8 @@
 											"variable": [
 												{
 													"key": "id",
-													"value": "-61408180",
-													"description": "(Required) "
+													"value": "1",
+													"description": "(Required) Identificador do cadastro do cliente."
 												}
 											]
 										}
@@ -304,8 +304,8 @@
 											"variable": [
 												{
 													"key": "id",
-													"value": "-61408180",
-													"description": "(Required) "
+													"value": "1",
+													"description": "(Required) Identificador do cadastro do cliente."
 												}
 											]
 										}
@@ -350,8 +350,8 @@
 											"variable": [
 												{
 													"key": "id",
-													"value": "-61408180",
-													"description": "(Required) "
+													"value": "1",
+													"description": "(Required) Identificador do cadastro do cliente."
 												}
 											]
 										}
@@ -396,8 +396,8 @@
 											"variable": [
 												{
 													"key": "id",
-													"value": "-61408180",
-													"description": "(Required) "
+													"value": "1",
+													"description": "(Required) Identificador do cadastro do cliente."
 												}
 											]
 										}
@@ -435,8 +435,8 @@
 									"variable": [
 										{
 											"key": "id",
-											"value": "-61408180",
-											"description": "(Required) "
+											"value": "1",
+											"description": "(Required) Identificador do cadastro do cliente."
 										}
 									]
 								},
@@ -462,8 +462,8 @@
 											"variable": [
 												{
 													"key": "id",
-													"value": "-61408180",
-													"description": "(Required) "
+													"value": "1",
+													"description": "(Required) Identificador do cadastro do cliente."
 												}
 											]
 										}
@@ -499,8 +499,8 @@
 											"variable": [
 												{
 													"key": "id",
-													"value": "-61408180",
-													"description": "(Required) "
+													"value": "1",
+													"description": "(Required) Identificador do cadastro do cliente."
 												}
 											]
 										}
@@ -536,8 +536,8 @@
 											"variable": [
 												{
 													"key": "id",
-													"value": "-61408180",
-													"description": "(Required) "
+													"value": "1",
+													"description": "(Required) Identificador do cadastro do cliente."
 												}
 											]
 										}
@@ -573,8 +573,8 @@
 											"variable": [
 												{
 													"key": "id",
-													"value": "-61408180",
-													"description": "(Required) "
+													"value": "1",
+													"description": "(Required) Identificador do cadastro do cliente."
 												}
 											]
 										}
@@ -601,7 +601,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/api/v1/cliente?page=77212253&size=16964013&sort=[\"id ad\",\"Lorem\"]&page=&size=",
+							"raw": "{{baseUrl}}/api/v1/cliente?page=55702819&size=28678899&sort=[\"pariatur Ut culpa sunt\",\"ut aliqua nostrud\"]&page=&size=",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -613,17 +613,17 @@
 							"query": [
 								{
 									"key": "page",
-									"value": "77212253",
+									"value": "55702819",
 									"description": "(Required) "
 								},
 								{
 									"key": "size",
-									"value": "16964013",
+									"value": "28678899",
 									"description": "(Required) "
 								},
 								{
 									"key": "sort",
-									"value": "[\"id ad\",\"Lorem\"]",
+									"value": "[\"pariatur Ut culpa sunt\",\"ut aliqua nostrud\"]",
 									"description": "(Required) "
 								},
 								{
@@ -647,7 +647,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/api/v1/cliente?page=77212253&size=16964013&sort=id ad,Lorem&page=&size=",
+									"raw": "{{baseUrl}}/api/v1/cliente?page=55702819&size=28678899&sort=pariatur Ut culpa sunt,ut aliqua nostrud&page=&size=",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -659,15 +659,15 @@
 									"query": [
 										{
 											"key": "page",
-											"value": "77212253"
+											"value": "55702819"
 										},
 										{
 											"key": "size",
-											"value": "16964013"
+											"value": "28678899"
 										},
 										{
 											"key": "sort",
-											"value": "id ad,Lorem"
+											"value": "pariatur Ut culpa sunt,ut aliqua nostrud"
 										},
 										{
 											"key": "page",
@@ -698,7 +698,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/api/v1/cliente?page=77212253&size=16964013&sort=id ad,Lorem&page=&size=",
+									"raw": "{{baseUrl}}/api/v1/cliente?page=55702819&size=28678899&sort=pariatur Ut culpa sunt,ut aliqua nostrud&page=&size=",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -710,15 +710,15 @@
 									"query": [
 										{
 											"key": "page",
-											"value": "77212253"
+											"value": "55702819"
 										},
 										{
 											"key": "size",
-											"value": "16964013"
+											"value": "28678899"
 										},
 										{
 											"key": "sort",
-											"value": "id ad,Lorem"
+											"value": "pariatur Ut culpa sunt,ut aliqua nostrud"
 										},
 										{
 											"key": "page",
@@ -749,7 +749,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/api/v1/cliente?page=77212253&size=16964013&sort=id ad,Lorem&page=&size=",
+									"raw": "{{baseUrl}}/api/v1/cliente?page=55702819&size=28678899&sort=pariatur Ut culpa sunt,ut aliqua nostrud&page=&size=",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -761,15 +761,15 @@
 									"query": [
 										{
 											"key": "page",
-											"value": "77212253"
+											"value": "55702819"
 										},
 										{
 											"key": "size",
-											"value": "16964013"
+											"value": "28678899"
 										},
 										{
 											"key": "sort",
-											"value": "id ad,Lorem"
+											"value": "pariatur Ut culpa sunt,ut aliqua nostrud"
 										},
 										{
 											"key": "page",
@@ -800,7 +800,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/api/v1/cliente?page=77212253&size=16964013&sort=id ad,Lorem&page=&size=",
+									"raw": "{{baseUrl}}/api/v1/cliente?page=55702819&size=28678899&sort=pariatur Ut culpa sunt,ut aliqua nostrud&page=&size=",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -812,15 +812,15 @@
 									"query": [
 										{
 											"key": "page",
-											"value": "77212253"
+											"value": "55702819"
 										},
 										{
 											"key": "size",
-											"value": "16964013"
+											"value": "28678899"
 										},
 										{
 											"key": "sort",
-											"value": "id ad,Lorem"
+											"value": "pariatur Ut culpa sunt,ut aliqua nostrud"
 										},
 										{
 											"key": "page",
@@ -1040,7 +1040,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/api/v1/cliente/filtrado?nome=et veniam occaecat irure tempor&dataCadastro=1988-04-11",
+							"raw": "{{baseUrl}}/api/v1/cliente/filtrado?nome=José Manoel&dataCadastro=2021-12-19",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -1053,13 +1053,13 @@
 							"query": [
 								{
 									"key": "nome",
-									"value": "et veniam occaecat irure tempor",
-									"description": "Nome do cleinte que será utilizado como filtro verificando se contém em uma parte do nome."
+									"value": "José Manoel",
+									"description": "Nome do cliente que será utilizado como filtro verificando se contém em uma parte do nome."
 								},
 								{
 									"key": "dataCadastro",
-									"value": "1988-04-11",
-									"description": "Data de cadastro do cleinte que será utilizado como filtro verificando se existe algum igual."
+									"value": "2021-12-19",
+									"description": "Data de cadastro do cliente que será utilizado como filtro verificando se existe algum igual."
 								}
 							]
 						},
@@ -1072,7 +1072,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/api/v1/cliente/filtrado?nome=et veniam occaecat irure tempor&dataCadastro=1988-04-11",
+									"raw": "{{baseUrl}}/api/v1/cliente/filtrado?nome=José Manoel&dataCadastro=2021-12-19",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -1085,11 +1085,11 @@
 									"query": [
 										{
 											"key": "nome",
-											"value": "et veniam occaecat irure tempor"
+											"value": "José Manoel"
 										},
 										{
 											"key": "dataCadastro",
-											"value": "1988-04-11"
+											"value": "2021-12-19"
 										}
 									]
 								}
@@ -1112,7 +1112,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/api/v1/cliente/filtrado?nome=et veniam occaecat irure tempor&dataCadastro=1988-04-11",
+									"raw": "{{baseUrl}}/api/v1/cliente/filtrado?nome=José Manoel&dataCadastro=2021-12-19",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -1125,11 +1125,11 @@
 									"query": [
 										{
 											"key": "nome",
-											"value": "et veniam occaecat irure tempor"
+											"value": "José Manoel"
 										},
 										{
 											"key": "dataCadastro",
-											"value": "1988-04-11"
+											"value": "2021-12-19"
 										}
 									]
 								}
@@ -1152,7 +1152,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/api/v1/cliente/filtrado?nome=et veniam occaecat irure tempor&dataCadastro=1988-04-11",
+									"raw": "{{baseUrl}}/api/v1/cliente/filtrado?nome=José Manoel&dataCadastro=2021-12-19",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -1165,11 +1165,11 @@
 									"query": [
 										{
 											"key": "nome",
-											"value": "et veniam occaecat irure tempor"
+											"value": "José Manoel"
 										},
 										{
 											"key": "dataCadastro",
-											"value": "1988-04-11"
+											"value": "2021-12-19"
 										}
 									]
 								}
@@ -1192,7 +1192,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/api/v1/cliente/filtrado?nome=et veniam occaecat irure tempor&dataCadastro=1988-04-11",
+									"raw": "{{baseUrl}}/api/v1/cliente/filtrado?nome=José Manoel&dataCadastro=2021-12-19",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -1205,11 +1205,11 @@
 									"query": [
 										{
 											"key": "nome",
-											"value": "et veniam occaecat irure tempor"
+											"value": "José Manoel"
 										},
 										{
 											"key": "dataCadastro",
-											"value": "1988-04-11"
+											"value": "2021-12-19"
 										}
 									]
 								}
