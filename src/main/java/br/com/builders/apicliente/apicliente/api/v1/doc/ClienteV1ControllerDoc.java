@@ -34,20 +34,23 @@ public interface ClienteV1ControllerDoc {
     ClienteV1ResponseDoc criarCliente(@RequestBody @Valid CriarClienteV1Request criarClienteRequest);
 
     @Operation(description = "Atualiza o cadastro de um cliente no sistema", summary = "Atualiza cadastro cliente")
+    @Parameter(in = ParameterIn.PATH, name = "id", example = "1", description = "Identificador do cadastro do cliente.")
     @ApiResponse(responseCode = "200", description = "Cliente atualizado com sucesso")
     ClienteV1ResponseDoc atualizarCliente(@PathVariable Long id, @RequestBody @Valid AtualizarClienteV1Request atualizarClienteRequest);
 
     @Operation(description = "Remove o cadastro de um cliente no sistema", summary = "Remove cadastro cliente")
+    @Parameter(in = ParameterIn.PATH, name = "id", example = "1", description = "Identificador do cadastro do cliente.")
     @ApiResponse(responseCode = "200", description = "Cliente removido com sucesso")
     ClienteV1ResponseDoc removerCliente(@PathVariable Long id);
 
     @Operation(description = "Buscar o cadastro de um cliente pelo Id", summary = "Busca por Id")
+    @Parameter(in = ParameterIn.PATH, name = "id", example = "1", description = "Identificador do cadastro do cliente.")
     @ApiResponse(responseCode = "200", description = "Busca realizada com sucesso")
     ClienteV1ResponseDoc buscarClientePorId(@PathVariable Long id);
 
     @Operation(summary = "Obter clientes filtrados", description = "Obtém resgistros dos clientes cadastrados pelos filtros informados na API.")
-    @Parameter(in = ParameterIn.QUERY, name = "nome", description = "Nome do cleinte que será utilizado como filtro verificando se contém em uma parte do nome.")
-    @Parameter(in = ParameterIn.QUERY, name = "dataCadastro", description = "Data de cadastro do cleinte que será utilizado como filtro verificando se existe algum igual.")
+    @Parameter(in = ParameterIn.QUERY, name = "nome", example = "José Manoel", description = "Nome do cliente que será utilizado como filtro verificando se contém em uma parte do nome.")
+    @Parameter(in = ParameterIn.QUERY, name = "dataCadastro", example = "2021-12-19", description = "Data de cadastro do cliente que será utilizado como filtro verificando se existe algum igual.")
     @ApiResponse(responseCode = "200", description = "Cadastros dos clientes filtrados com sucesso.")
     Set<ClienteV1ResponseDoc> buscarClientesPorFiltro(@RequestParam(value = "nome", required = false) String nome,
                                                       @RequestParam(value = "dataCadastro", required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate dataCadastro);
