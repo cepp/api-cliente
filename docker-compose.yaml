@@ -1,0 +1,35 @@
+version: '3.5'
+
+services:
+  apicliente:
+    build: .
+    image: apicliente
+    container_name: apicliente
+    hostname: apicliente
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://apicliente:5400/cliente?sslmode=disable
+      SPRING_DATASOURCE_USERNAME: usr_cliente
+      SPRING_DATASOURCE_PASSWORD: S3nh@Qu@s3#S3gur4!=
+    ports:
+      - 8080:8080
+    depends_on:
+      - dbcliente
+    networks:
+      - apicliente-net
+
+  dbcliente:
+    image: postgres
+    container_name: dbcliente
+    hostname: apicliente
+    ports:
+      - "5400:5432"
+    environment:
+      POSTGRES_PASSWORD: S3nh@Qu@s3#S3gur4!=
+      POSTGRES_USER: usr_cliente
+      POSTGRES_DB: cliente
+    networks:
+      - apicliente-net
+
+networks:
+  apicliente-net:
+    driver: bridge

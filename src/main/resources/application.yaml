@@ -1,0 +1,38 @@
+---
+############## SERVER CONFIG ##############
+server:
+  port: 8080
+  servlet:
+    contextPath: /api-cliente
+
+############## ACTUATOR CONFIG ##############
+management:
+  endpoints:
+    web:
+      basePath: /actuator
+      exposure:
+        include: httptrace
+
+############## SWAGGER ##############
+springdoc:
+  apiDocs:
+    path: /api-docs
+  pathsToMatch: /api/**
+
+############## DATASOURCE ##############
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5400/cliente
+    driverClassName: org.postgresql.Driver
+    username: usr_cliente
+    password: MyS3cr3tP@ss
+  jpa:
+    properties:
+      hibernate:
+        ddlAuto: update
+        defaultSchema: cliente
+        generateStatistics: false
+    databasePlatform: org.hibernate.dialect.PostgreSQL10Dialect
+    showSql: false
+    openInView: false
+    generateDdl: true

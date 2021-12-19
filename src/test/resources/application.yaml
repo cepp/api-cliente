@@ -1,0 +1,38 @@
+---
+############## SERVER CONFIG ##############
+server:
+  port: 8083
+  servlet:
+    contextPath: /api-cliente
+
+############## ACTUATOR CONFIG ##############
+management:
+  endpoints:
+    web:
+      basePath: /actuator
+      exposure:
+        include: httptrace
+
+############## SWAGGER ##############
+springdoc:
+  apiDocs:
+    path: /api-docs
+  pathsToMatch: /api/**
+
+############## DATASOURCE ##############
+spring:
+  datasource:
+    url: jdbc:h2:mem:cliente;DB_CLOSE_DELAY=-1;mv_store=false
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    properties:
+      hibernate:
+        ddlAuto: update
+        defaultSchema: cliente
+        generateStatistics: false
+    databasePlatform: org.hibernate.dialect.H2Dialect
+    showSql: false
+    openInView: false
+    generateDdl: true
