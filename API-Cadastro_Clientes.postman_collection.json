@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "27b75147-36d9-4eb9-b7ab-07ea88c2a55a",
+		"_postman_id": "97e1a0a7-cba5-4ccd-a2ee-7fdc6c07cd18",
 		"name": "API - Cadastro Clientes",
 		"description": "API - Cadastro de clientes para o MVP e avaliação na Builders\n\nContact Support:\n Name: Carlos Pantoja\n Email: cepsolutionsltds@gmail.com",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -601,7 +601,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseUrl}}/api/v1/cliente?page=55702819&size=28678899&sort=[\"pariatur Ut culpa sunt\",\"ut aliqua nostrud\"]&page=&size=",
+							"raw": "{{baseUrl}}/api/v1/cliente?page=30358036&size=92512989&sort=[\"a\",\"nisi aute commodo\"]",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -613,28 +613,18 @@
 							"query": [
 								{
 									"key": "page",
-									"value": "55702819",
+									"value": "30358036",
 									"description": "(Required) "
 								},
 								{
 									"key": "size",
-									"value": "28678899",
+									"value": "92512989",
 									"description": "(Required) "
 								},
 								{
 									"key": "sort",
-									"value": "[\"pariatur Ut culpa sunt\",\"ut aliqua nostrud\"]",
+									"value": "[\"a\",\"nisi aute commodo\"]",
 									"description": "(Required) "
-								},
-								{
-									"key": "page",
-									"value": "",
-									"description": "(Required) Número da página para a paginação. Caso não seja informado a paginação será desligada."
-								},
-								{
-									"key": "size",
-									"value": "",
-									"description": "(Required) Quantidade de itens por página para a paginação. Caso não seja o número da página a paginação será desligada."
 								}
 							]
 						},
@@ -647,7 +637,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/api/v1/cliente?page=55702819&size=28678899&sort=pariatur Ut culpa sunt,ut aliqua nostrud&page=&size=",
+									"raw": "{{baseUrl}}/api/v1/cliente?page=30358036&size=92512989&sort=a,nisi aute commodo",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -659,23 +649,15 @@
 									"query": [
 										{
 											"key": "page",
-											"value": "55702819"
+											"value": "30358036"
 										},
 										{
 											"key": "size",
-											"value": "28678899"
+											"value": "92512989"
 										},
 										{
 											"key": "sort",
-											"value": "pariatur Ut culpa sunt,ut aliqua nostrud"
-										},
-										{
-											"key": "page",
-											"value": ""
-										},
-										{
-											"key": "size",
-											"value": ""
+											"value": "a,nisi aute commodo"
 										}
 									]
 								}
@@ -698,7 +680,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/api/v1/cliente?page=55702819&size=28678899&sort=pariatur Ut culpa sunt,ut aliqua nostrud&page=&size=",
+									"raw": "{{baseUrl}}/api/v1/cliente?page=30358036&size=92512989&sort=a,nisi aute commodo",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -710,23 +692,15 @@
 									"query": [
 										{
 											"key": "page",
-											"value": "55702819"
+											"value": "30358036"
 										},
 										{
 											"key": "size",
-											"value": "28678899"
+											"value": "92512989"
 										},
 										{
 											"key": "sort",
-											"value": "pariatur Ut culpa sunt,ut aliqua nostrud"
-										},
-										{
-											"key": "page",
-											"value": ""
-										},
-										{
-											"key": "size",
-											"value": ""
+											"value": "a,nisi aute commodo"
 										}
 									]
 								}
@@ -749,7 +723,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/api/v1/cliente?page=55702819&size=28678899&sort=pariatur Ut culpa sunt,ut aliqua nostrud&page=&size=",
+									"raw": "{{baseUrl}}/api/v1/cliente?page=30358036&size=92512989&sort=a,nisi aute commodo",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -761,23 +735,15 @@
 									"query": [
 										{
 											"key": "page",
-											"value": "55702819"
+											"value": "30358036"
 										},
 										{
 											"key": "size",
-											"value": "28678899"
+											"value": "92512989"
 										},
 										{
 											"key": "sort",
-											"value": "pariatur Ut culpa sunt,ut aliqua nostrud"
-										},
-										{
-											"key": "page",
-											"value": ""
-										},
-										{
-											"key": "size",
-											"value": ""
+											"value": "a,nisi aute commodo"
 										}
 									]
 								}
@@ -800,7 +766,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{baseUrl}}/api/v1/cliente?page=55702819&size=28678899&sort=pariatur Ut culpa sunt,ut aliqua nostrud&page=&size=",
+									"raw": "{{baseUrl}}/api/v1/cliente?page=30358036&size=92512989&sort=a,nisi aute commodo",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -812,23 +778,15 @@
 									"query": [
 										{
 											"key": "page",
-											"value": "55702819"
+											"value": "30358036"
 										},
 										{
 											"key": "size",
-											"value": "28678899"
+											"value": "92512989"
 										},
 										{
 											"key": "sort",
-											"value": "pariatur Ut culpa sunt,ut aliqua nostrud"
-										},
-										{
-											"key": "page",
-											"value": ""
-										},
-										{
-											"key": "size",
-											"value": ""
+											"value": "a,nisi aute commodo"
 										}
 									]
 								}
