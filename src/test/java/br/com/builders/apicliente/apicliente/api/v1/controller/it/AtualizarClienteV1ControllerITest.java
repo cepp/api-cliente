@@ -77,6 +77,66 @@ class AtualizarClienteV1ControllerITest {
     }
 
     @Test
+    void quandoClienteAtualizaCpfExistente() throws Exception {
+        var jsonRequest = "{\n" +
+                "    \"cpf\": \"59576042089\",\n" +
+                "    \"dataNascimento\": \"2017-08-14\",\n" +
+                "    \"endereco\": \"Rua movimentada agora, 344, AP 2314\",\n" +
+                "    \"nome\": \"José manoel Primeiro\"\n" +
+                "}";
+
+
+        this.mvc.perform(post(URI.create("/api/v1/cliente"))
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .characterEncoding(StandardCharsets.UTF_8)
+                        .content(jsonRequest))
+                .andExpect(status().isCreated())
+                .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
+                .andExpect(jsonPath("$.nome").value("José manoel Primeiro"))
+                .andExpect(jsonPath("$.cpf").value("21049624041"))
+                .andExpect(jsonPath("$.endereco").value("Rua movimentada agora, 344, AP 2314"))
+                .andExpect(jsonPath("$.id").exists());
+
+        var jsonRequestSegundo = "{\n" +
+                "    \"cpf\": \"83653169003\",\n" +
+                "    \"dataNascimento\": \"2017-08-14\",\n" +
+                "    \"endereco\": \"Rua movimentada agora, 344, AP 2314\",\n" +
+                "    \"nome\": \"José manoel Segundo\"\n" +
+                "}";
+
+
+        var mvcPerform = this.mvc.perform(post(URI.create("/api/v1/cliente"))
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .characterEncoding(StandardCharsets.UTF_8)
+                        .content(jsonRequestSegundo))
+                .andExpect(status().isCreated())
+                .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
+                .andExpect(jsonPath("$.nome").value("José manoel Segundo"))
+                .andExpect(jsonPath("$.cpf").value("83653169003"))
+                .andExpect(jsonPath("$.endereco").value("Rua movimentada agora, 344, AP 2314"))
+                .andExpect(jsonPath("$.id").exists());
+
+        var response = mvcPerform.andReturn().getResponse().getContentAsString();
+        var jsonDeserialized = this.objectMapper.readValue(response, ClienteV1Response.class);
+        var idString = String.valueOf(jsonDeserialized.getId());
+
+        var jsonAtualizacaoRequest = "{\n" +
+                "    \"cpf\": \"59576042089\",\n" +
+                "    \"dataNascimento\": \"2017-08-14\",\n" +
+                "    \"endereco\": \"Rua movimentada agora, 344, AP 2314\",\n" +
+                "    \"nome\": \"José manoel Segundo\"\n" +
+                "}";
+
+        this.mvc.perform(put(URI.create("/api/v1/cliente/".concat(idString)))
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .characterEncoding(StandardCharsets.UTF_8)
+                        .content(jsonAtualizacaoRequest))
+                .andExpect(status().isBadRequest())
+                .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_PLAIN))
+                .andExpect("Parâmetros passados no request inválidos."::equals);
+    }
+
+    @Test
     void quandoCpfInvalido() throws Exception {
         var jsonRequest = "{\n" +
                 "    \"cpf\": \"22972975041\",\n" +

@@ -4,6 +4,7 @@ import br.com.builders.apicliente.apicliente.api.v1.controller.ClienteV1Controll
 import br.com.builders.apicliente.apicliente.api.v1.model.AtualizarClienteV1Request;
 import br.com.builders.apicliente.apicliente.api.v1.model.ClienteV1Response;
 import br.com.builders.apicliente.apicliente.api.v1.service.ClienteV1Service;
+import br.com.builders.apicliente.apicliente.exception.ClienteExistenteException;
 import br.com.builders.apicliente.apicliente.exception.ClienteNaoExisteException;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -43,10 +44,15 @@ class AtualizarClienteV1ControllerTest {
         assertEquals(respostaEsperada.getIdade(), resposta.getIdade());
     }
 
-
     @Test
     void quandoClienteNaoCadastrado() {
         when(this.clienteV1Service.atualizarCliente(anyLong(), any())).thenThrow(ClienteNaoExisteException.class);
         assertThrows(ClienteNaoExisteException.class, () -> this.clienteV1Controller.atualizarCliente(1L, new AtualizarClienteV1Request()));
+    }
+
+    @Test
+    void quandoClienteAlteraCpfJaExiste() {
+        when(this.clienteV1Service.atualizarCliente(anyLong(), any())).thenThrow(ClienteExistenteException.class);
+        assertThrows(ClienteExistenteException.class, () -> this.clienteV1Controller.atualizarCliente(1L, new AtualizarClienteV1Request()));
     }
 }

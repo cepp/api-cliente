@@ -17,4 +17,5 @@ public interface ClienteRepository extends PagingAndSortingRepository<Cliente, L
     @Query(value = "FROM Cliente WHERE (:nome is null OR nome like %:nome%) AND (:dataCadastro is null OR dataCadastro = :dataCadastro)")
     Set<Cliente> findClienteByFiltrado(String nome, LocalDate dataCadastro);
 
+    boolean existsClienteByIdNotAndCpf(Long id, String cpf);
 }

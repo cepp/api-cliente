@@ -3,7 +3,6 @@ package br.com.builders.apicliente.apicliente.api.v1.service;
 import br.com.builders.apicliente.apicliente.api.v1.converter.ClienteConverter;
 import br.com.builders.apicliente.apicliente.api.v1.doc.ClienteV1ResponseDoc;
 import br.com.builders.apicliente.apicliente.api.v1.model.AtualizarClienteV1Request;
-import br.com.builders.apicliente.apicliente.api.v1.model.ClienteV1Response;
 import br.com.builders.apicliente.apicliente.api.v1.model.CriarClienteV1Request;
 import br.com.builders.apicliente.apicliente.exception.ClienteExistenteException;
 import br.com.builders.apicliente.apicliente.exception.ClienteNaoExisteException;
@@ -45,6 +44,10 @@ public class ClienteV1Service {
 
     @Transactional
     public ClienteV1ResponseDoc atualizarCliente(Long id, AtualizarClienteV1Request atualizarClienteRequest) {
+        if (this.clienteRepository.existsClienteByIdNotAndCpf(id, atualizarClienteRequest.getCpf())) {
+            throw new ClienteExistenteException();
+        }
+
         var cliente = this.clienteRepository.getClienteById(id).orElseThrow(ClienteNaoExisteException::new);
 
         var clienteAlterado = this.clienteConverter.atualiarRequestParaCliente(atualizarClienteRequest, cliente);

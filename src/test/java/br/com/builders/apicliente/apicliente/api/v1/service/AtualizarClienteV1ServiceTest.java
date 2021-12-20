@@ -3,6 +3,7 @@ package br.com.builders.apicliente.apicliente.api.v1.service;
 import br.com.builders.apicliente.apicliente.api.v1.converter.ClienteConverter;
 import br.com.builders.apicliente.apicliente.api.v1.model.AtualizarClienteV1Request;
 import br.com.builders.apicliente.apicliente.api.v1.model.ClienteV1Response;
+import br.com.builders.apicliente.apicliente.exception.ClienteExistenteException;
 import br.com.builders.apicliente.apicliente.exception.ClienteNaoExisteException;
 import br.com.builders.apicliente.apicliente.model.Cliente;
 import br.com.builders.apicliente.apicliente.repository.ClienteRepository;
@@ -12,7 +13,6 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import javax.swing.text.html.Option;
 import java.time.LocalDate;
 import java.util.Optional;
 
@@ -52,6 +52,7 @@ class AtualizarClienteV1ServiceTest {
         when(this.clienteConverter.clienteParaResponse(any())).thenReturn(clienteResponseEsperado);
         when(this.clienteConverter.atualiarRequestParaCliente(clienteRequest, clienteEsperado)).thenReturn(clienteEsperado);
         when(this.clienteRepository.save(any())).thenReturn(clienteEsperado);
+        when(this.clienteRepository.existsClienteByIdNotAndCpf(1L, clienteRequest.getCpf())).thenReturn(false);
 
         var serviceResponse = this.clienteV1Service.atualizarCliente(1L, clienteRequest);
 
@@ -68,6 +69,16 @@ class AtualizarClienteV1ServiceTest {
                 .dataNascimento(LocalDate.of(1984, 4, 10)).endereco("endereço aleatório")
                 .nome("nome aleatório").build();
         when(this.clienteRepository.getClienteById(1L)).thenReturn(Optional.empty());
+        when(this.clienteRepository.existsClienteByIdNotAndCpf(1L, clienteRequest.getCpf())).thenReturn(false);
         assertThrows(ClienteNaoExisteException.class, () -> this.clienteV1Service.atualizarCliente(1L, clienteRequest));
+    }
+
+    @Test
+    void quandoClienteAlteraCpfJaExiste() {
+        var clienteRequest = AtualizarClienteV1Request.builder().cpf("12345678901")
+                .dataNascimento(LocalDate.of(1984, 4, 10)).endereco("endereço aleatório")
+                .nome("nome aleatório").build();
+        when(this.clienteRepository.existsClienteByIdNotAndCpf(1L, clienteRequest.getCpf())).thenReturn(true);
+        assertThrows(ClienteExistenteException.class, () -> this.clienteV1Service.atualizarCliente(1L, clienteRequest));
     }
 }
