@@ -10,7 +10,6 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.web.PageableDefault;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
@@ -20,7 +19,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
 import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 import java.util.Set;
 
@@ -56,8 +54,6 @@ public interface ClienteV1ControllerDoc {
                                                       @RequestParam(value = "dataCadastro", required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate dataCadastro);
 
     @Operation(summary = "Obter todos os clientes", description = "Obtém resgistros de todos os clientes cadastrados paginados.")
-    @Parameter(in = ParameterIn.QUERY, name = "page", required = true, description = "Número da página para a paginação. Caso não seja informado a paginação será desligada.")
-    @Parameter(in = ParameterIn.QUERY, name = "size", required = true, description = "Quantidade de itens por página para a paginação. Caso não seja o número da página a paginação será desligada.")
     @ApiResponse(responseCode = "200", description = "Cadastros dos clientes retornados com sucesso.")
     Page<ClienteV1ResponseDoc> buscarTodosClientesPaginados(Pageable pageable);
 }
